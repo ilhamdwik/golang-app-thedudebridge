@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  thedudebridge:
+    #build: .
+    image: ilhaskam/thedudebridge:v1
+    container_name: thedudebridge
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    ports:
+      - "80:5758"
+    # environment:
+    #   - PORT=80
